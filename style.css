@@ -1,0 +1,269 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff7eb9, #ff758c);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Welcome Page */
+#welcome-page h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#welcome-page p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #ff4757;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #ff6b81;
+}
+
+/* Secret Page */
+#secret-page .letter {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mini-Game Page */
+#game-page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#love-meter {
+  width: 80%;
+  margin-top: 20px;
+}
+
+#love-label {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/* Vintage Letter Styles */
+.valentines-day {
+  position: absolute; /* Change to absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to truly center */
+  cursor: pointer;
+}
+
+.envelope {
+  position: relative;
+  filter: drop-shadow(0 0 25px rgba(0, 0, 0, .3));
+}
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  width: 254px;
+  height: 254px;
+  background-color: #ff9494;
+  transform: rotate(-45deg);
+  border-radius: 0 15px 0 0;
+  left: -37px;
+  top: -82px;
+}
+
+.envelope:after {
+  content: "";
+  position: absolute;
+  background-color: #ff9494;
+  width: 360px;
+  height: 225px;
+  left: -90px;
+  top: 45px;
+}
+
+.heart {
+  position: relative;
+  background-color: #e01911;
+  display: inline-block;
+  height: 180px;
+  top: 50px;
+  left: 0;
+  transform: rotate(-45deg);
+  width: 180px;
+  filter: drop-shadow(0 -10px 25px rgba(0, 0, 0, .3));
+  transition: .5s;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #e01911;
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  position: absolute;
+}
+
+.heart:before {
+  top: -100px;
+  left: 0;
+}
+
+.heart:after {
+  left: 100px;
+  top: 0;
+}
+
+.front {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 190px solid #fbd2d2;
+  border-top: 113px solid transparent;
+  border-bottom: 113px solid transparent;
+  top: 44px;
+  left: 80px;
+  z-index: 4;
+}
+
+.front:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 190px solid #fbd2d2;
+  border-top: 113px solid transparent;
+  border-bottom: 113px solid transparent;
+  top: -113px;
+  left: -170px;
+}
+
+.front:after {
+  width: 0;
+  height: 0;
+  position: absolute;
+  content: "";
+  border-bottom: 150px solid #fce7e9;
+  border-right: 180px solid transparent;
+  border-left: 180px solid transparent;
+  top: -36px;
+  left: -170px;
+}
+
+.text {
+  position: absolute;
+  font-family: Arial, sans-serif;
+  letter-spacing: 5px;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  top: 80px;
+  left: 15px;
+  transition: .5s;
+}
+
+.text2 {
+  position: absolute;
+  top: 275px;
+  color: white;
+  font-family: 'Brush Script MT', cursive;
+  text-align: center;
+  width: 195px;
+  font-size: 20px;
+}
+
+.valentines-day:hover .heart {
+  transform: translateY(-50px) rotate(-45deg);
+}
+
+.valentines-day:hover .text {
+  transform: translateY(-50px);
+}
+
+/* Falling Hearts */
+.falling-heart {
+  position: fixed;
+  font-size: 1.5rem;
+  color: red;
+  animation: falling 5s linear infinite; /* Adjust duration as needed */
+  z-index: 1; /* Ensure hearts are on top */
+  pointer-events: none; /* Prevent interaction with hearts */
+}
+
+@keyframes falling {
+  0% {
+      transform: translateY(-10vh); /* Start above the viewport */
+      opacity: 0;
+  }
+  25% {
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100vh); /* Fall to bottom of viewport */
+      opacity: 0;
+  }
+}
+
+/* Easter Egg */
+.easter-egg {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: pink;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Popup Message Styles (Removed) */
+#popup-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  z-index: 100; /* Ensure it's on top */
+}
+
+.hidden {
+  display: none;
+}
+

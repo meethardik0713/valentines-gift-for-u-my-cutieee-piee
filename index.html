@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 The Love Quest 2.0 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome-page" class="page active">
+        <h1>Happy Valentine's Day, Cutiepieeeee! 💕</h1>
+        <p>Do you want us together forever?? 👀❤️😉😌</p>
+        <button id="yes-btn">YESSS!! i want us to be togetherr</button>
+        <button id="no-btn">No, u're rudee old man 🙄😒💃 </button>
+    </div>
+
+    <div id="secret-page" class="page hidden">
+        <div class="letter">
+            <p>okayyy soo as u want us together nowww i want to tell u smethng u excited??</p>
+            <button id="tell-me-btn">yess tell mee??</button>
+            <button id="no-secret-btn">Nooo</button>
+        </div>
+    </div>
+
+    <div id="game-page" class="page hidden">
+        <h2>How much do u like me??</h2>
+        <input type="range" id="love-meter" min="0" max="100" value="0">
+        <p id="love-label">Bas itna? 😭</p>
+    </div>
+
+    <div id="finale-page" class="page hidden">
+        <h2 id="marriage-proposal">Meri Jaan! Mujhse Shaadi Karogi? 😍💍</h2>
+        <div id="surprise" class="hidden">
+            <h1>Surprise!</h1>
+        </div>
+
+        <div id="vintage-letter" class="hidden">
+            <div class="valentines-day">
+                <div class="envelope"></div>
+                <div class="heart"></div>
+                <div class="text">HAPPY <br> VALENTINE'S <br> DAY!</div>
+                <div class="front"></div>
+                <div class="text2">- hover over the envelope - </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="easter-egg">💖</div>
+
+    <!-- Audio Element with Loop -->
+    <audio id="love-song" src="assets/song.mp3" preload="auto" loop></audio>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
