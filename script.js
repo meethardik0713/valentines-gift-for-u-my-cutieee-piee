@@ -35,19 +35,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (value <= 20) {
             loveLabel.textContent = "Bas itna? 😭";
         } else if (value <= 30) {
-            loveLabel.textContent = "AREEE HADHH HAI AAGEE BADHAAAAAAAA GANDII";
+            loveLabel.textContent = "Are hadhh hai bada na aage??";
         } else if (value <= 40) {
-            loveLabel.textContent = "AREE BADHAALEE MERII MAA MAANJAANAA SORRYYYYY 😭😭";
+            loveLabel.textContent = "badhaooo cutieee sayy u likee mee 😭😭";
         } else if (value <= 50) {
-            loveLabel.textContent = "SRSLYY?? BASS 50% YHA I JUSTT STARTED LOVINGG UUU ONLINE WALA 🤣🤣🤣";
+            loveLabel.textContent = "SRSLYY?? Bas 50% Yha I Justt started loving u online wala 🤣🤣🤣";
         } else if (value <= 60) {
-            loveLabel.textContent = "AHH GOSHH ATLEAST 60??😭😢😱";
+            loveLabel.textContent = "Ahh damnn bas 60??😭😢😱";
         } else if (value <= 70) {
-            loveLabel.textContent = "BAS THODAA AURRRRRRRRR CUTIEEEEPIEEEE";
+            loveLabel.textContent = "bass thodaaaaa saa";
         } else if (value <= 90) {
-            loveLabel.textContent = "COMEEEEEONEE BASS 10 OR HAI BADHA DEE YRRR";
+            loveLabel.textContent = "Come on justt 10 moree cutieee ";
         } else {
-            loveLabel.textContent = "SOOOO WILL U BE MY VALENTINEEE??";
+            loveLabel.textContent = "So will u be my valentine forever??";
             
             // Show the marriage proposal for 2 seconds
             setTimeout(() => {
